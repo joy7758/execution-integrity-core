@@ -5,16 +5,61 @@ Execution Integrity
 （艾克色Q生 因泰格若替）  
 Meaning: Verifiable integrity of execution processes.
 
-## What is this?
+---
 
-Execution Integrity Core is a minimal implementation that demonstrates how AI agent executions can be recorded, chained, and independently verified.
+## Why Execution Integrity?
 
-This project focuses on:
+As AI agents gain execution capabilities, a structural problem emerges:
 
-- Recording execution events
-- Hash-chained integrity protection
-- Deterministic export for third-party verification
+- Who executed an action?
+- Was the execution trace altered?
+- Can a third party independently verify the sequence?
 
-It is not a security product.
-It is not a platform.
-It is a minimal structural proof of execution integrity.
+Traditional logging is not sufficient.
+
+Execution Integrity introduces a minimal structural proof model for execution chains.
+
+---
+
+## Minimal Integrity Model
+
+This project demonstrates a minimal closed-loop:
+
+1. Record execution event
+2. Hash-chain each event
+3. Allow deterministic export
+4. Support full-chain verification
+
+No platform.
+No orchestration layer.
+No policy layer.
+
+Just structural integrity.
+
+---
+
+## What This Is Not
+
+- Not a security product
+- Not a compliance framework
+- Not a monitoring tool
+
+It is a minimal execution integrity proof.
+
+---
+
+## Current Scope
+
+- In-memory hash chain
+- Deterministic serialization
+- Full chain verification
+- JSON export
+
+---
+
+## Future Exploration
+
+- Persistent storage
+- External verification CLI
+- Multi-node verification
+- Signature-based checkpointing
