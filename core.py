@@ -33,8 +33,9 @@ class ExecutionIntegrityCore:
 
         payload = {
             "spec": "execution-integrity-core",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "exported_at": exported_at,
+            "hash_alg": "sha256",
             "chain": self.chain
         }
 
