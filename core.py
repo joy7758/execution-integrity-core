@@ -8,9 +8,12 @@ class ExecutionIntegrityCore:
         self.chain = []
         self.previous_hash = "GENESIS"
 
-    def record(self, action, input_data, output_data):
+    def record(self, action, input_data, output_data, ts=None):
+        if ts is None:
+            ts = time.time()
+
         entry = {
-            "timestamp": time.time(),
+            "timestamp": ts,
             "action": action,
             "input": input_data,
             "output": output_data,
