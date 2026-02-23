@@ -27,13 +27,16 @@ class ExecutionIntegrityCore:
         self.previous_hash = current_hash
         self.chain.append(entry)
 
-    def export(self, filename="execution_log.json", exported_at=None):
+    def export(self, filename=None, exported_at=None):
         if exported_at is None:
             exported_at = time.time()
 
+        if filename is None:
+            filename = f"execution_log.{int(exported_at)}.json"
+
         payload = {
             "spec": "execution-integrity-core",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "exported_at": exported_at,
             "hash_alg": "sha256",
             "chain": self.chain
@@ -41,6 +44,8 @@ class ExecutionIntegrityCore:
 
         with open(filename, "w") as f:
             json.dump(payload, f, indent=2)
+
+        return filename
 
     def verify(self):
         prev = "GENESIS"

@@ -63,3 +63,13 @@ It is a minimal execution integrity proof.
 - External verification CLI
 - Multi-node verification
 - Signature-based checkpointing
+
+---
+
+## Quick Verify
+
+```bash
+python3 example.py
+python3 verify_export.py execution_log.json
+bash scripts/selfcheck.sh
+```

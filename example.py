@@ -7,9 +7,11 @@ ei.record("calculate", {"expression": "2+2"}, {"result": 4}, ts=1700000001.0)
 
 print("Verification before tamper:", ei.verify())
 
-# 篡改第一条记录
+exported_files = []
+exported_files.append(ei.export(filename="execution_log.json", exported_at=1700000002.0))
+exported_files.append(ei.export())
+
 ei.chain[0]["output"] = {"result": "Modified result"}
 
 print("Verification after tamper:", ei.verify())
-
-ei.export(exported_at=1700000002.0)
+print("Exported files:", exported_files)
