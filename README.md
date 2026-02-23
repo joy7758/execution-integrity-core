@@ -73,3 +73,7 @@ python3 example.py
 python3 verify_export.py execution_log.json
 bash scripts/selfcheck.sh
 ```
+
+## Adoption
+
+请阅读 [ADOPTION.md](ADOPTION.md)。
