@@ -26,3 +26,4 @@ bash scripts/selfcheck.sh
 
 ### 我能不能换 hash 算法
 未来可能支持；当前版本先固定 `sha256`，保证实现和验证路径简单一致。
+| `joy7758/execution-integrity-core` | ![spear-check](https://img.shields.io/github/actions/workflow/status/joy7758/execution-integrity-core/spear.yml?label=spear-check) |
