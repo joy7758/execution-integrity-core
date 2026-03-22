@@ -1,79 +1,25 @@
+<!-- language-switch:start -->
+<p>
+  <a href="./README.md">
+    <img src="https://img.shields.io/badge/English-Current-1f883d?style=for-the-badge" alt="English">
+  </a>
+  <a href="./README.zh-CN.md">
+    <img src="https://img.shields.io/badge/Chinese-Switch-0f172a?style=for-the-badge" alt="Chinese">
+  </a>
+</p>
+<!-- language-switch:end -->
 # Execution Integrity Core
 
-Execution Integrity  
-/ˌeksɪˈkjuːʃən ɪnˈteɡrəti/  
-（艾克色Q生 因泰格若替）  
-Meaning: Verifiable integrity of execution processes.
+Minimal execution integrity proof model for recording, hashing, exporting, and verifying execution chains.
 
----
+For the current execution-integrity layer in the five-layer stack, see [fdo-kernel-mvk](https://github.com/joy7758/fdo-kernel-mvk).
 
-## Why Execution Integrity?
+## Quick Links
 
-As AI agents gain execution capabilities, a structural problem emerges:
+- [Docs](./docs/)
+- [Adoption notes](./ADOPTION.md)
 
-- Who executed an action?
-- Was the execution trace altered?
-- Can a third party independently verify the sequence?
+## Language
 
-Traditional logging is not sufficient.
-
-Execution Integrity introduces a minimal structural proof model for execution chains.
-
----
-
-## Minimal Integrity Model
-
-This project demonstrates a minimal closed-loop:
-
-1. Record execution event
-2. Hash-chain each event
-3. Allow deterministic export
-4. Support full-chain verification
-
-No platform.
-No orchestration layer.
-No policy layer.
-
-Just structural integrity.
-
----
-
-## What This Is Not
-
-- Not a security product
-- Not a compliance framework
-- Not a monitoring tool
-
-It is a minimal execution integrity proof.
-
----
-
-## Current Scope
-
-- In-memory hash chain
-- Deterministic serialization
-- Full chain verification
-- JSON export
-
----
-
-## Future Exploration
-
-- Persistent storage
-- External verification CLI
-- Multi-node verification
-- Signature-based checkpointing
-
----
-
-## Quick Verify
-
-```bash
-python3 example.py
-python3 verify_export.py execution_log.json
-bash scripts/selfcheck.sh
-```
-
-## Adoption
-
-请阅读 [ADOPTION.md](ADOPTION.md)。
+- Chinese intro: [README.zh-CN.md](./README.zh-CN.md)
+- This landing page stays English-only to avoid mixed-language presentation.
